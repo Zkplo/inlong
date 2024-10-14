@@ -28,19 +28,20 @@ import net.sf.jsqlparser.expression.Function;
 import java.math.BigDecimal;
 
 /**
- * AcosdFunction   ->   acosd(numeric)
- * description:
- * - Return NULL if 'numeric' is NULL;
- * - Return the arc cosine of 'numeric' in units of degrees.
+ * AcosdFunction -> acosd(numeric) description: - Return NULL if 'numeric' is NULL; - Return the arc
+ * cosine of 'numeric' in units of degrees.
  */
-@TransformFunction(names = {"acosd"}, parameter = "(Numeric numeric)", descriptions = {
-        "- Return \"\" if 'numeric' is NULL;",
-        "- Return the arc cosine of 'numeric' in units of degrees."
-}, examples = {
-        "acosd(1) = 0.0",
-        "acosd(0) = 90.0",
-        "acosd(-1) = 180.0"
-})
+// spotless:off
+@TransformFunction(names = {"acosd"},
+        parameter = "(Numeric numeric)", descriptions = {
+            "- Return \"\" if 'numeric' is NULL;",
+            "- Return the arc cosine of 'numeric' in units of degrees."
+    }, examples = {
+            "acosd(1) = 0.0",
+            "acosd(0) = 90.0",
+            "acosd(-1) = 180.0"
+    })
+// spotless:on
 public class AcosdFunction implements ValueParser {
 
     private ValueParser numberParser;
